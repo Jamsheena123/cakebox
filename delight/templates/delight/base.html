@@ -17,18 +17,18 @@
     
     </head>
     <body>
-        <div class="co bg-dark gap-0px">
+        <div class="co ">
         <div class="d-flex" id="wrapper ">
             <!-- Sidebar-->
             <div class="border-end bg-dark " id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light "><i class="fa-solid fa-cake-candles"></i> Cake <span class="text-danger">Rito</span></div>
+                <div class="sidebar-heading bg-dark text-white mt-4 mb-4 ms-3 bg-light "><i class="fa-solid fa-cake-candles"></i> Cake <span class="text-danger">Rito</span></div>
                 <div class="list-group list-group-flush ">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark text-white" href="#!">Home</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark  text-white" href="{%url 'add-category'%}">Category Mgmt</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark  text-white" href="{%url 'add-cake'%}">Cake Mgmt</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark  text-white" href="{%url 'cake-list'%}">Cake List</a>   
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark text-white border-0 listitems" href="#!">Home</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark  text-white border-0" href="{%url 'add-category'%}">Category Mgmt</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark  text-white border-0" href="{%url 'add-cake'%}">Cake Mgmt</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark  text-white border-0" href="{%url 'cake-list'%}">Cake List</a>   
                     
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark padding-5px text-white" href="{%url 'signout'%}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>   
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 bg-dark padding-5px text-white mt-5" href="{%url 'signout'%}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>   
 
                     
 
@@ -75,6 +75,17 @@
             color: white;
             }
 
+
+            .listitems{
+            margin-top: 60px;
+            }
+
+            #sidebar-wrapper{
+                height: 100vh;
+                width: 250px;
+                padding-left: 20px;
+                font-size: large;
+            }
            
         </style>
     </body>

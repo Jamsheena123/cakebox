@@ -1,0 +1,134 @@
+{%extends 'delight/base.html'%}
+
+{%block body_block%}
+
+<div class="container row bg-dark ">
+
+    {%for ck in cake%} 
+        <div class="col-lg-3 col-md-3 col-12 ">
+            <div class="product-card me-2 mb-3  ">
+                <div><img src="{{ck.image.url}}" alt="" width="250px" height="250px"></div>
+                <div class="product-details">
+                <h2 class="product-title">{{ck.name}}</h2>
+                <p class="product-description">category: {{ck.category}}</p>
+                <p class="product-description">flavor: {{ck.flavor}}</p>
+                <td class="buttons">
+
+                    <a href="{%url 'cake-edit' ck.id%}" class="buttons"><i class="fa-solid fa-pen"></i></a>
+                    <a href="{%url 'varient-add' ck.id%}" class="buttons"><i class="fa-solid fa-plus"></i></a>
+                    <a href="{%url 'cake-detail' ck.id%}" class="buttons"><i class="fa-solid fa-list"></i></a>
+                    <a href="{%url 'cake-remove' ck.id%}" class="buttons"><i class="fa-solid fa-trash" style="color: #e34635;"></i></a>
+                </td>
+               
+               
+                
+                </div>
+            </div>
+        </div>
+    {%endfor%}
+</div>
+
+
+<style>
+    .container {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      /* margin: 0; */
+      gap: 5px;
+      font-family: Arial, sans-serif;
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* max-width: 100%; */
+     
+
+     
+    }
+
+    .button{
+      margin-left: 10px;
+    }
+    .buttons:hover{
+      transform: translateY(-4px);
+      margin-left:25px ;
+      margin-right: 10px;
+
+    } 
+    
+  
+    .product-card {
+
+      width: 300px;
+      height: 60vh;
+      background-color: rgb(16, 16, 14);
+      border-radius: 20px;
+      /* display: grid; */
+      margin-top: 10px;
+      padding: 60%;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 10px 10px 20px rgba(181, 157, 157, 0.1);
+      gap: 6px;
+      background: url('ck.image.jpg') no-repeat center/cover;
+      /* margin-left: 10px; */
+      transform: scale(1.1);
+    }
+
+    .img{
+      width: 50%;
+      height: 5px;
+    }
+    
+
+  
+    .product-details {
+     font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+      color: white;
+    }
+  
+    .product-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+  
+    .product-description {
+      font-size: 14px;
+      margin: 10px 0;
+      font: bolder
+    }
+    .btn{
+      background: #49C608;
+	    border-radius: 5px;
+      position: relative;
+      color: aquamarine;
+      margin: 0;
+      padding:0;
+      font-size: smaller;
+      margin-top: 10px;
+      align-items: center;
+      cursor: pointer;
+     
+
+     
+
+    }
+   
+
+    
+
+
+
+
+
+    
+
+  </style>
+
+{%endblock%}
+
+
+    

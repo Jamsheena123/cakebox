@@ -1,0 +1,59 @@
+{%extends "delight/base.html"%}
+
+{%block body_block%}
+    <div class="container d-flex flex-column  mt-7 text  ">
+   
+    
+        <div class="border border-4 border-shadow p-5">
+         <h5 class="text-center mt-4 mb-5 ">ADD NEW CAKES</h5>
+         
+         {%if messages%}
+             {%for m in messages%}
+     
+                 <div>
+                 {{m}}
+                 </div>
+             {%endfor%}
+     
+         {%endif%}
+     
+         <form action="" method="post" enctype="multipart/form-data">
+             {%csrf_token%}
+             {{form.as_p}}
+        
+             <input type="submit" value="add" class="btn btn-outline-secondary form-control">
+         </form>
+     
+        </div>
+     
+        <div>
+            <table class="table table-striped">
+     
+             <!-- <tr>
+                 <td>Name</td>
+                 <td>Action</td>
+             </tr> -->
+             {%for cat in categories%}
+                <tr>
+                 <td>{{cat.name}}</td>
+                 <td>
+                     <a href="{%url 'remove-category' cat.id%}">delete</a>
+                     
+                 </td>
+         
+                </tr>
+             {%endfor%}
+         
+         </table>
+        </div>
+     
+     
+     
+        
+     
+     
+     </div>
+
+ {%endblock%}        
+
+    

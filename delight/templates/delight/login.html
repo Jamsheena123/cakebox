@@ -23,24 +23,36 @@ body{
     height: 60%;
     margin-top: 10%;
     position: relative;
-    left: 700px;
+    left: 1000px;
     color: #eee;
-
-
+    background-color:black;
     
 }
+
 .container{
-
-    background-image:url("/images/modern.jpg");
+    background-image: url("/images/modern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-bottom: 30px; */
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;    
     
-    
-    width: 200%; /* Set the width of the container */
-    height: 250px; /* Set the height of the container */ 
-    
-    /* background-size: cover; */
    
-
+     
 }
+
+
+
+    
+
+   
+    
+    
+    
+    
+  
 
 h1{
     color: white;
@@ -76,7 +88,7 @@ h1{
     
     {%if messages%}
     <div class="container d-flex justify-content-center ">
-        <div class="w-50" style="height: 100px;">
+        <div class="w-100" style="height: 100px;">
 
             <div>
                 {%for m in messages%}
@@ -102,9 +114,10 @@ h1{
 
     {%endif%}
     
-<div class="container h-100 d-flex  ">
+<div class="container h-100 d-flex ">
+   
 
-    <div class="section rounded-3 bg-dark p-5 shadow">
+    <div class="section rounded-3 p-5 shadow">
        <div class="text-center mb-2">
          <h1 class="fw-bolder">Login</h1>
        </div>

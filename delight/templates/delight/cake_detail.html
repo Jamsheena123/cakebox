@@ -2,18 +2,21 @@
 
 {%block body_block%}
     
-<div class="container mt-4">
+<div class="container mt-4 ">
   <div class="row">
     
           <div class="col-4">
-              <div class="card" style="width:100%">
+              <div class="card bg-secondary" style="width:100%">
                   <img src="{{cake.image.url}}" class="card-img-top" alt="..." height="350px" width="220px">
                   <div class="card-body">
-                    <h5 class="card-title">{{cake.name}}</h5>
+                    <h5 class="card-title bg-secondary">{{cake.name}}</h5>
                   </div>
                   <ul class="list-group list-group-flush">
 
-                    <li class="list-group-item">{{cake.category}}</li>
+                    <li class="list-group-item bg-secondary">category:{{cake.category}}</li>
+                    <li class="list-group-item bg-secondary">flavor:{{cake.flavor}}</li>
+
+                    
 
                     
                   </ul>
@@ -24,12 +27,12 @@
                 </div>
           </div>
           <div class="col-8 border border-dark">
-             <table class="table table-striped">
+             <table class="table table-striped table-dark">
 
               <tr>
                   
                   <td>Price</td>
-                  <td>flavor</td>
+                  <!-- <td>flavor</td> -->
                   <td>Size</td>
                   <td>Action</td>
                   
@@ -38,16 +41,16 @@
     
                   <tr>
                       <td>{{v.price}}</td>
-                      <td>{{v.flavor}}</td>
+                      <!-- <td>{{v.flavor}}</td> -->
                       <td>{{v.size}}</td>
 
                         
                         
                   
                   <td>
-                    <a href="{%url 'varient-edit' v.id%}" class="btn btn-outline-info">Edit</a>
-                    <a href="{%url 'varient-remove' v.id%}" class="btn btn-outline-danger">Remove</a>
-                    <a href="{%url 'offer-add' v.id%}"  class="btn btn-outline-success">Add offer</a>
+                    <a href="{%url 'varient-edit' v.id%}" class="btn btn-info me-2">Edit</a>
+                    <a href="{%url 'varient-remove' v.id%}" class="btn btn-danger me-2">Remove</a>
+                    <a href="{%url 'offer-add' v.id%}"  class="btn btn-success me-2">Add offer</a>
     
     
                   </td>
@@ -94,3 +97,4 @@
  
     
 {%endblock%}
+<

@@ -1,9 +1,9 @@
 {%extends "delight/base.html"%}
 
-{%block body_block%}
+{%block body_block%} 
+<div class="container d-flex flex-column mt-5">
 
-<div class="container d-grid flex-column  mt-5  align-items-center ">
-    <h5>ADD NEW CATEGORY</h5>
+        <h5 class="text-center ms-4 me-3 ">ADD NEW CATEGORY</h5>
 
     {%if messages%}
         {%for m in messages%}
@@ -23,8 +23,8 @@
 
 
 
-   <div>
-    <table class="table table-dark table-striped mt-4 ">
+    <div>
+    <table class="table table-dark table-striped  ms-4 me-5 mt-4">
 
         <tr>
             <td>Name</td>
@@ -46,9 +46,16 @@
 
 
 
-   
-
-
-</div>
-
+</div>   
 {%endblock%}
+<!-- <style>
+    .container{
+        margin: 0 auto;
+    }
+</style> -->
+
+
+
+
+
+

@@ -6,8 +6,8 @@
 
     {%for ck in cake%} 
         <div class="col-lg-3 col-md-3 col-12 ">
-            <div class="product-card me-2 mb-3  ">
-                <div><img src="{{ck.image.url}}" alt="" width="250px" height="250px"></div>
+            <div class="product-card ms-4 me-4  mt-4 ">
+                <div><img src="{{ck.image.url}}" alt="" width="250px" height="230px"></div>
                 <div class="product-details">
                 <h2 class="product-title">{{ck.name}}</h2>
                 <p class="product-description">category: {{ck.category}}</p>
@@ -30,6 +30,10 @@
 
 
 <style>
+  .buttons{
+    margin-left: 20px;
+  }
+
     .container {
       display: flex;
       justify-content: center;
@@ -38,47 +42,52 @@
       font-family: Arial, sans-serif;
       margin-top: auto;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-columns: 2fr 2fr 1fr; */
       /* max-width: 100%; */
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
      
 
      
     }
+    .product-title{
+      font-weight: bolder;
 
-    .button{
-      margin-left: 10px;
     }
-    .buttons:hover{
+
+    
+    /* .buttons:hover{
       transform: translateY(-4px);
       margin-left:25px ;
       margin-right: 10px;
 
-    } 
+    }  */
     
-  
-    .product-card {
 
-      width: 300px;
-      height: 60vh;
+    .product-card {
+      width: 250px;
+      height: auto;
       background-color: rgb(16, 16, 14);
-      border-radius: 20px;
+      border-radius: 15px;
       /* display: grid; */
       margin-top: 10px;
-      padding: 60%;
       align-items: center;
       flex-direction: column;
       overflow: hidden;
-      box-shadow: 10px 10px 20px rgba(181, 157, 157, 0.1);
-      gap: 6px;
+      box-shadow: 10px 10px 20px rgba(117, 109, 109, 0.1);
       background: url('ck.image.jpg') no-repeat center/cover;
       /* margin-left: 10px; */
-      transform: scale(1.1);
-    }
+      transform: scale(1.0);
 
-    .img{
+      
+ 
+      }
+  
+ 
+
+    /* .img{
       width: 50%;
       height: 5px;
-    }
+    } */
     
 
   
@@ -99,22 +108,8 @@
       margin: 10px 0;
       font: bolder
     }
-    .btn{
-      background: #49C608;
-	    border-radius: 5px;
-      position: relative;
-      color: aquamarine;
-      margin: 0;
-      padding:0;
-      font-size: smaller;
-      margin-top: 10px;
-      align-items: center;
-      cursor: pointer;
-     
-
-     
-
-    }
+  
+    
    
 
     

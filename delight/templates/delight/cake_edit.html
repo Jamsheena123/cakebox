@@ -7,41 +7,17 @@
     
    <div class="border border-4 border-shadow p-5">
     <h5 class="text-center mt-4 mb-5 ">EDIT CAKE</h5>
-    
-    {%if messages%}
-        {%for m in messages%}
-
-            <div>
-            {{m}}
-            </div>
-        {%endfor%}
-
-    {%endif%}
 
     <form action="" method="post" enctype="multipart/form-data">
         {%csrf_token%}
         {{form.as_p}}
    
-        <input type="submit" value="Update" class="btn btn-outline-secondary form-control">
+        <input type="submit" value="Update" class="btn btn-success form-control">
     </form>
 
    </div>
 
    <div>
-    <table class="table table-striped mt-3 ">
-
-       
-        {%for cat in categories%}
-           <tr>
-            <td>{{cat.name}}</td>
-            <td>
-                <a href="{%url 'remove-category' cat.id%}">delete</a>
-            </td>
-    
-           </tr>
-        {%endfor%}
-    
-    </table>
    </div>
 
 

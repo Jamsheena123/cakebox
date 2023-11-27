@@ -2,49 +2,16 @@
 
 {%block body_block%}
     <div class="container d-flex flex-column align-items-center mt-5 ">
-        <h5 class="mb-4">ADD VARIENT</h5>
-        
-    
-        {%if messages%}
-            {%for m in messages%}
-    
-                <div>
-                {{m}}
-                </div>
-            {%endfor%}
-    
-        {%endif%}
-        <form action="" method="post">
-            {%csrf_token%}
-            {{form.as_p}}
-       
-            <input type="submit" value="add" class="btn btn-secondary form-control">
-        </form>
-    
-    
-    
-       <div>
-        <table class="table table-striped">  
-    
-        {%for cat in categories%}
-                <tr>
-                <td>{{cat.name}}</td>
-                <td>
-                    <a href="{%url 'remove-category' cat.id%}">delete</a>
-                    <a href="{%url 'varient-add' cat.id%}">varient-add</a>
-                </td>
-        
-               </tr>
-        {%endfor%}
-        
-        </table>
+            <div class="border border-light border-2 p-5 mt-5">
+                <h5 class="mb-4">ADD VARIENT</h5>
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {{form.as_p}}
+               
+                    <input type="submit" value="add" class="btn btn-success form-control">
+                </form>
+            </div>
        </div>
-    
-    
-    
-       
-    
-    
     </div>
     
     
